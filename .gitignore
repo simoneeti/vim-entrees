@@ -1,0 +1,3 @@
+*.db
+creds
+__pycache__
