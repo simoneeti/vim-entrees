@@ -1,7 +1,10 @@
 from parser import Entry
 import sqlite3
+import pathlib
+from os.path import join
 
-DATABASE = "../datos.db"
+
+DATABASE = join(pathlib.Path(__file__).parent.parent.resolve(), "datos.db")
 
 class Query:
     def __init__(self, texto="", timestamp=None):

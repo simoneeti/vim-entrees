@@ -2,10 +2,12 @@ from google.oauth2 import service_account
 from apiclient.discovery import build
 from parser import Entry
 import datetime
+from os.path import join
+from pathlib import Path
 
+KEY_FILE_LOCATION = join(Path(__file__).parent.parent.resolve(), "creds", "svc_acc_calendar.json")
 CALENDAR_ID = "vintrob.simon@gmail.com"
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-KEY_FILE_LOCATION = '../creds/svc_acc_calendar.json'
 
 
 creds = service_account.Credentials.from_service_account_file(
